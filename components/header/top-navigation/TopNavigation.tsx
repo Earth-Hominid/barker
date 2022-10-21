@@ -6,6 +6,7 @@ import {
   MoonIcon,
 } from '@heroicons/react/24/outline';
 import Logo from '../logo/Logo';
+import DropdownContainer from '../drop-down-menu/DropdownContainer';
 
 interface Props {}
 
@@ -48,6 +49,24 @@ const TopNavigation = ({
           className="flex flex-row items-center"
         >
           <Logo />
+          <DropdownContainer />
+        </motion.div>
+        <motion.div
+          initial={{
+            x: 500,
+            opacity: 0,
+            scale: 0.5,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 1.5,
+          }}
+        >
+          <NavigationButtonContainer />
         </motion.div>
       </InsideContainer>
     </MainContainer>
