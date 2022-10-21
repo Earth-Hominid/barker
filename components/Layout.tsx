@@ -16,16 +16,13 @@ interface Props {
   width: string;
 }
 
-const Layout: React.FC<Props> = () => {
+const Layout: React.FC<Props> = ({ title, description, keywords }) => {
   return (
     <>
       <Head>
-        <title></title>
-        <meta
-          name="description"
-          content="Barking by day, howling by night. Barker is a social platform to share howls, woofs, and barks."
-        />
-        <meta name="keywords" content="" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
       </Head>
 
       <header id="header">
